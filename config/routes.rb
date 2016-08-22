@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   get 'item/edit'
 
+  root 'item#index'
+  get 'item/:id' => 'item#show', as: 'item_show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
