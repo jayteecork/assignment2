@@ -1,3 +1,24 @@
+<%= form_tag(root_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Inventory" %>
+<%= submit_tag "Search"  %>
+<% end %>
+
+<% if @items.present? %>
+<% @items %>
+
+
+
+   
+
+
+<% else %>
+  <p>There are no items in stock correpsonding to the term(s) <%= params[:search] %>.</p>
+  <p><%= link_to "<< Back to full listing", root_path %></p> 
+    <% end %>
+
+
+
+
 <h1>Item listing</h1>
 <% @items.each do |item| %>
  <p><%= link_to item.name, item_show_path(item) %></p>
