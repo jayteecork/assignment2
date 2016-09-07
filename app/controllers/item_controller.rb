@@ -34,7 +34,7 @@ end
 def create
  @item = Item.new(item_params)
  if @item.save
- redirect_to root_path
+ redirect_to item_index_path
  else
  render 'new'
  end
@@ -43,7 +43,7 @@ end
 def update
  @item = Item.find(params[:id])
  if @item.update(item_params)
- redirect_to root_path
+ redirect_to item_index_path
  else
  render 'edit'
  end
@@ -52,7 +52,7 @@ end
 def delete
  @item = Item.find(params[:id])
  if @item.destroy
- redirect_to root_path
+ redirect_to item_index_path
  else
  render item_show_path(@item)
  end

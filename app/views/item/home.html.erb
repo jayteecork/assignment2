@@ -1,16 +1,18 @@
-<h1>Item#home</h1>
+
 <div class="jumbotron">
-    <center><h1>Virtual Global College</h1></center>
+    <center><h1>Tully's Furniture International</h1></center>
 </div>
 
-        <center><h2>Welcome to Virtual Global College</h2>
+        <center><h2>Welcome to Tully's Furniture Supple Ltd.</h2>
         <p>
-            Welcome to Virtual Global College, Ireland's number one online learning solution!
-        </p></center>
+            Welcome to Tully's, Ireland's number-one online furniture solution!
+        </p>
+        <p> If you are a trader, please log-in below </p>
+        <p> Alternatively, if you would just like to browse our catalogue then please <%= link_to "Click Here", :controller => "item", :action => "index"  %> </p>
 
         <section class="container">
     <div class="login">
-      <h1>Login to Web App</h1>
+      <h2>Login to your Tully's trader account:</h2>
       <form method="post" action="index.html">
         <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
         <p><input type="password" name="password" value="" placeholder="Password"></p>
@@ -24,9 +26,7 @@
       </form>
     </div>
 
-    <div class="login-help">
-      <p>Forgot your password? <a href="index.html">Click here to reset it</a>.</p>
-    </div>
+    
   </section>
 
-<p> <%= link_to "Lets see number 2", :controller => "item", :action => "index"  %> </p>
+<p> </p></center>
