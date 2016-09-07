@@ -3,6 +3,10 @@ class ItemController < ApplicationController
   	@items = Item.all
   
   end
+
+  def home
+  end
+  
 def index
   
   if params[:search]
